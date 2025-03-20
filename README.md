@@ -32,8 +32,9 @@ URI=your_mongodb_connection_string
 ```
 
 ### Start the Server
+#### On project root
 ```sh
-npm start
+npm run dev 
 ```
 The backend will be running on `http://localhost:<PORT>`.
 
