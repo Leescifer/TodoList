@@ -2,11 +2,8 @@
 
 ### Backend Only Available
 
-This repository contains only the backend for a Todo List application built using the MERN (MongoDB, Express.js, React, Node.js) stack.
-Frontend will be 
-
-"Frontend is coming up next for upload."
-
+This repository contains only the backend for a Todo List application built using the MERN (MongoDB, Express.js, React, Node.js) stack.  
+Frontend is coming up next for upload.
 
 ## Setting Up Your Own Server and Database
 
@@ -22,6 +19,9 @@ cd TodoList
 ```sh
 npm install
 ```
+
+## Create Your Own Database
+To create your own database, visit [MongoDB](https://www.mongodb.com/) and set up a new database. Update your `.env` file with the appropriate MongoDB connection string.
 
 ### Set Up Environment Variables
 Create a `.env` file in the root directory and configure the following variables:
@@ -50,5 +50,4 @@ The backend will be running on `http://localhost:<PORT>`.
 
 ## Contributing
 Feel free to fork this repository and contribute by submitting pull requests.
-
 
