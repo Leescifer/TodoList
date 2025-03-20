@@ -4,10 +4,10 @@ import { getAllTodo, createTodo, retrievedTodo, updateTodo, deleteTodo } from ".
 const router = express.Router();
 
 // Get all
-router.get("", getAllTodo);
+router.get("/", getAllTodo);
 
 // Create a new todo
-router.post("", createTodo);
+router.post("/", createTodo);
 
 // Retrieve a single todo
 router.get("/:todoId", retrievedTodo);
