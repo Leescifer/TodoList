@@ -4,7 +4,7 @@ const router = express.Router();
 router.use(express.json());
 
 export const signUp = async (req, res, next) => {
-    res.send("Hello World")
+   
 }
 export const logIn = async (req, res, next) => {
 }
