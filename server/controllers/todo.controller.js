@@ -60,7 +60,7 @@ export const retrievedTodo = async (req, res) => {
     } catch (error) {
         res.status(500).send({
             success: false,
-            message: "Failed to retrieve Todo",
+            message: "Failed to retrieved Todo",
             data: error.message,
         });
     }
