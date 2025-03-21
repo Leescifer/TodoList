@@ -5,7 +5,6 @@ const router = express.Router();
 router.use(express.json());
 
 //Get all users
-
 export const getAllUser = async (req, res) => {
     try {
         const result = await User.find();
