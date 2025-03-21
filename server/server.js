@@ -26,7 +26,7 @@ app.use("/api/auth", authRoutes);
 //Global Error Handler
 app.use((err, req, res, next) => {
     const statusCode = err.statusCode || 500;
-    const errorMessage = err.message || "Internal Error Server";
+    const message = err.message || "Internal Error Server";
     res.status(statusCode).json({ error: message });
 });
 

@@ -22,26 +22,8 @@ export const getAllUser = async (req, res) => {
     }
 };
 
-export const createUser = async (req, res) => {
-    const userDetails = req.body;
-    try {
-        const result = await User.create(userDetails);
-        res.send({
-            success: true,
-            message: "User List Created Successfully",
-            data: result,
-        })
-    } catch (error) {
-        res.status(500).send({
-            success: false,
-            message: "User List Creation Failed",
-            data: error.message,
-        })
-    }
-}
-
 export const retrivedUser = async (req, res) => {
-    const { userId  } = req.params;
+    const { userId } = req.params;
     try {
         const result = await User.findById(userId)
         if (!result) {
@@ -69,7 +51,7 @@ export const updateUser = async (req, res) => {
     const updateUser = req.body;
 
     try {
-        const result = await User.findByIdAndUpdate( userId, updateUser);
+        const result = await User.findByIdAndUpdate(userId, updateUser);
         if (!result) {
             return res.status(404).send({
                 success: false,
