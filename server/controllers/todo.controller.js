@@ -5,7 +5,7 @@ const router = express.Router();
 router.use(express.json()); 
 
 // Get all todos
-export const getAllTodo = async (req, res) => {
+export const getAllTodo = async (req, res, next) => {
     try {
         const result = await Todo.find();
         res.send({
@@ -23,7 +23,7 @@ export const getAllTodo = async (req, res) => {
 };
 
 // Create a new todo
-export const createTodo = async (req, res) => {
+export const createTodo = async (req, res, next) => {
     const todoDetails = req.body;
     try {
         const result = await Todo.create(todoDetails);
@@ -42,7 +42,7 @@ export const createTodo = async (req, res) => {
 };
 
 // Get a todo by ID
-export const retrievedTodo = async (req, res) => {
+export const retrievedTodo = async (req, res, next) => {
     const { todoId } = req.params;
     try {
         const result = await Todo.findById(todoId);
@@ -67,7 +67,7 @@ export const retrievedTodo = async (req, res) => {
 };
 
 //Update Todo
-export const updateTodo = async (req, res) => {
+export const updateTodo = async (req, res, next) => {
     const { todoId } = req.params;
     const updatedTodo = req.body;
 
@@ -93,7 +93,7 @@ export const updateTodo = async (req, res) => {
     }
 };
 
-export const deleteTodo = async (req, res) => {
+export const deleteTodo = async (req, res, next) => {
     const { todoId } = req.params
 
     try {

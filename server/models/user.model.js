@@ -1,6 +1,6 @@
-import mongoose, { Schema, model } from "mongoose";
+import mongoose from "mongoose";
 
-const personalInformation = new Schema({
+const personalInformation = new mongoose.Schema({
      firstName: {
         type: String,
         required: true,
@@ -19,7 +19,7 @@ const personalInformation = new Schema({
      }
 })
 
-const personalAddress = new Schema({
+const personalAddress = new mongoose.Schema({
      city: {
         type: String,
         required: true
@@ -31,7 +31,7 @@ const personalAddress = new Schema({
 })
 
 
-const userSchema = new Schema({
+const userSchema = new mongoose.Schema({
     username: {
         type: String,
         required: true,
@@ -46,6 +46,6 @@ const userSchema = new Schema({
     address: personalAddress,
 }, { timestamps: true })
 
-const User = mongoose.models.User || model("User", userSchema)
+const User = mongoose.model("User", userSchema)
 
 export default User
