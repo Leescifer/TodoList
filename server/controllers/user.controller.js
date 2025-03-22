@@ -13,6 +13,7 @@ export const getAllUser = async (req, res) => {
             message: "User Lists Retrieved",
             data: result,
         });
+        console.log(result)
     } catch (error) {
         res.status(500).send({
             success: false,
